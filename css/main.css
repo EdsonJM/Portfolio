@@ -335,6 +335,7 @@ main {
     align-items: center;
     text-align: center; }
     main .lg-heading {
+      font-size: 3rem;
       line-height: 1;
       margin-bottom: 1rem; }
   ul.menu-nav,
@@ -359,7 +360,12 @@ main {
     grid-template-columns: 1fr;
     grid-template-areas: "img-bio" "bio-desc" "bio-content1" "bio-content2" "bio-content3"; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .modal-content {
+    grid-template-columns: 1fr;
+    grid-template-areas: "header-modal" "image-project" "project-desc" "skill-title" "project-skill"; }
+  .boxes div {
+    font-size: 1.5rem; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
