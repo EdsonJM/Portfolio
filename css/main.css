@@ -170,6 +170,7 @@ main {
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas: "img-bio bio-desc bio-desc" "bio-content1 bio-content2 bio-content3"; }
   .about-info .bio-img {
+    width: 35%;
     grid-area: img-bio;
     margin: auto;
     border-radius: 50%;
