@@ -193,6 +193,23 @@ main {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   margin-top: 1rem; }
+  .projects .project-a {
+    position: relative;
+    display: block; }
+    .projects .project-a:hover .project-overlay {
+      display: flex; }
+  .projects .project-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center; }
   .projects img {
     width: 100%;
     border: 3px #fff solid; }
@@ -200,6 +217,67 @@ main {
       opacity: 0.5;
       border-color: #3de0d8;
       transition: all 0.5s ease-out; }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.8); }
+  .modal .modal-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "header-modal header-modal header-modal" "image-project project-desc project-desc" "skill-title skill-title skill-title" "project-skill project-skill project-skill";
+    grid-gap: 20px;
+    position: relative;
+    background: #515151;
+    margin: 10% auto;
+    padding: 20px;
+    width: 60%;
+    height: 50%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalOpen;
+    animation-duration: 1.5s; }
+    .modal .modal-content .modal-header {
+      grid-area: header-modal;
+      position: absolute;
+      width: 100%;
+      border-bottom: 3px solid #3de0d8; }
+    .modal .modal-content .img-modal {
+      grid-area: image-project;
+      width: 100%; }
+    .modal .modal-content .project-description {
+      grid-area: project-desc; }
+    .modal .modal-content .skill-title {
+      grid-area: skill-title; }
+    .modal .modal-content .project-tecnologies {
+      grid-area: project-skill; }
+      .modal .modal-content .project-tecnologies i {
+        font-size: 2rem;
+        margin: 0 10px; }
+        .modal .modal-content .project-tecnologies i:hover {
+          color: #3de0d8;
+          transition: all 0.5s ease-out; }
+  .modal .closeBtn {
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+    grid-area: close-modal; }
+    .modal .closeBtn:hover, .modal .closeBtn:focus {
+      color: #3de0d8;
+      text-decoration: none;
+      cursor: pointer; }
+
+@keyframes modalOpen {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 .boxes {
   display: flex;
@@ -226,7 +304,7 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #3de0d8;
+    background: #1db4ac;
     color: #000; }
 
 .btn-dark {
