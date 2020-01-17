@@ -62,20 +62,6 @@
       "bio-content3";
   }
 
-  .projects {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .modal-content {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "header-modal"
-      "image-project"
-      "project-desc"
-      "skill-title"
-      "project-skill";
-  }
-
   .boxes {
     div {
       font-size: 1.5rem;

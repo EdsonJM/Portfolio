@@ -231,16 +231,16 @@ main {
   background: rgba(0, 0, 0, 0.8); }
   .modal .modal-content {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas: "header-modal header-modal header-modal" "image-project project-desc project-desc" "skill-title skill-title skill-title" "project-skill project-skill project-skill";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "header-modal" "image-project" "project-desc" "skill-title" "project-skill";
     grid-gap: 20px;
     position: relative;
     background: #515151;
     margin: 10% auto;
     padding: 20px;
     width: 60%;
-    height: 50%;
+    height: 100%;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
     animation-name: modalOpen;
     animation-duration: 1.5s; }
@@ -360,11 +360,6 @@ main {
   .about-info {
     grid-template-columns: 1fr;
     grid-template-areas: "img-bio" "bio-desc" "bio-content1" "bio-content2" "bio-content3"; }
-  .projects {
-    grid-template-columns: repeat(2, 1fr); }
-  .modal-content {
-    grid-template-columns: 1fr;
-    grid-template-areas: "header-modal" "image-project" "project-desc" "skill-title" "project-skill"; }
   .boxes div {
     font-size: 1.5rem; } }
 
